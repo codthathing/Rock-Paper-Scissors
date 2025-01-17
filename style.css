@@ -8,6 +8,7 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  outline: none;
   font-family: var(--BarrowSemiCondensed);
 }
 
@@ -207,8 +208,8 @@ body {
   }
 
   #main-game {
-    width: 17rem;
-    height: 15rem;
+    width: 13rem;
+    height: 11rem;
   }
 
   .game-main-button {
