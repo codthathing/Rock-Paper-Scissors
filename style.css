@@ -72,7 +72,7 @@ body {
 
 #main-game {
   position: relative;
-  background: url("../src/assets/bg-triangle.svg");
+  background: url("./src/assets/bg-triangle.svg");
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -1,7 +1,7 @@
 const gameButtonDetails = [
-  { id: 0, buttonIcon: "../src/assets/icon-paper.svg", buttonAlt: "PAPER", buttonClass: "game-button-paper" },
-  { id: 1, buttonIcon: "../src/assets/icon-scissors.svg", buttonAlt: "SCISSORS", buttonClass: "game-button-scissors" },
-  { id: 2, buttonIcon: "../src/assets/icon-rock.svg", buttonAlt: "ROCK", buttonClass: "game-button-rock" },
+  { id: 0, buttonIcon: "./src/assets/icon-paper.svg", buttonAlt: "PAPER", buttonClass: "game-button-paper" },
+  { id: 1, buttonIcon: "./src/assets/icon-scissors.svg", buttonAlt: "SCISSORS", buttonClass: "game-button-scissors" },
+  { id: 2, buttonIcon: "./src/assets/icon-rock.svg", buttonAlt: "ROCK", buttonClass: "game-button-rock" },
 ];
 
 function createButton(mainButtonClass, mainButtonIconClass, { buttonClass, buttonIcon, buttonAlt }) {
