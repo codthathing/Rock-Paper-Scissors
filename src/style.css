@@ -1,0 +1,607 @@
+:root {
+  --BarrowSemiCondensed: "Barlow Semi Condensed", serif;
+  --box-shadow-color:
+  --box-shadow-y:
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  font-family: var(--BarrowSemiCondensed);
+}
+
+body {
+  background: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  border: 2px solid hsl(217, 16%, 45%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#score-text-value-div {
+  background-color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+#score-text {
+  color: hsl(229, 64%, 46%);
+}
+
+#score-value {
+  color: hsl(229, 25%, 31%);
+  font-style: normal;
+}
+
+#game-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-button {
+  background-color: white;
+  border-radius: 50%;
+  border-style: solid;
+  cursor: pointer;
+  box-shadow: 0 var(--box-shadow-y) 0px var(--box-shadow-color), 0 var(--box-shadow-y) 0px #D6D6D6 inset;
+}
+
+.game-button-paper {
+  --box-shadow-color: hsl(230, 89%, 62%); 
+  border-color: hsl(230, 89%, 65%);
+}
+
+.game-button-scissors {
+  --box-shadow-color: hsl(39, 89%, 49%); 
+  border-color: hsl(40, 84%, 53%);
+}
+
+.game-button-rock {
+  --box-shadow-color: hsl(349, 71%, 52%); 
+  border-color: hsl(349, 70%, 56%);
+}
+
+#main-game {
+  position: relative;
+  background: url("../src/assets/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.game-main-button {
+  position: absolute;
+}
+
+.game-main-button:nth-child(3) {
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+#main-game-outcome {
+  display: flex;
+}
+
+.game-outcome-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.game-outcome-text {
+  font-weight: 600;
+  color: white;
+}
+
+.game-button-div {
+  flex: 1; 
+  display: flex; 
+  align-items: center;
+}
+
+.game-outcome-default-div {
+  border: none; 
+  background-color: hsl(237, 62%, 23%); 
+  border-radius: 50%;
+}
+
+#game-outcome-result-div {
+  text-align: center;
+}
+
+#game-result-text {
+  color: white;
+}
+
+#game-play-again-button {
+  border: none;
+  background-color: white;
+  color: hsl(229, 25%, 31%);
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 150ms linear;
+}
+
+#game-play-again-button:hover {
+  color: hsl(349, 71%, 52%);
+}
+
+#rules-button {
+  width: fit-content;
+  border: 2px solid hsl(217, 16%, 45%);
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+#rules-fixed-section {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#rules-div {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#rules-text {
+  color: hsl(229, 25%, 31%);
+  font-weight: 700;
+}
+
+#close-rules-icon {
+  position: absolute;
+  cursor: pointer;
+}
+
+#rules-details-icon {
+  align-self: center;
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  #header {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+    margin: 1rem;
+  }
+
+  #game-logo-icon {
+    width: 7rem;
+  }
+
+  #score-text-value-div {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+  }
+
+  #score-text {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+
+  #score-value {
+    font-size: 2.5rem;
+  }
+
+  #main-game {
+    width: 17rem;
+    height: 15rem;
+  }
+
+  .game-main-button {
+    --box-shadow-y: 3.5px;
+    width: 5rem;
+    height: 5rem;
+    border-width: 7.5px; 
+  }
+
+  .game-main-button:nth-child(1) {
+    left: -1.75rem;
+    top: -1.75rem;
+  }
+  
+  .game-main-button:nth-child(2) {
+    right: -1.75rem;
+    top: -1.75rem;;
+  }
+  
+  .game-main-button:nth-child(3) {
+    bottom: -1.75rem;
+  }
+
+  .game-main-button-icon {
+    width: 1.5rem;
+  }
+
+  #main-game-outcome {
+    gap: 5rem 2.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game-outcome-button {
+    --box-shadow-y: 5px;
+    width: 12rem;
+    height: 12rem;
+    border-width: 15px;
+  }
+  
+  .game-outcome-button-icon {
+    width: 4rem;
+  }
+
+  .game-outcome-div {
+    gap: 1.5rem 0;
+  }
+
+  .game-outcome-text {
+    order: 1;
+    letter-spacing: 0.5px;
+    font-size: 0.75rem;
+  }
+
+  .game-outcome-default-div {
+    width: 8rem; 
+    height: 8rem; 
+  }
+
+  #game-outcome-result-div {
+    order: 2;
+    width: 100%;
+  }
+
+  #game-result-text {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+  }
+
+  #game-play-again-button {
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+    letter-spacing: 0.25px;
+  }
+
+  #rules-button {
+    align-self: center;
+    margin: 1rem 0 2.5rem 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    font-size: 0.75rem;
+  }
+
+  #rules-div {
+    width: 100%;
+    height: 100%;
+    padding: 7rem 1.5rem 0 1.5rem;
+    gap: 4.5rem 0;
+    align-items: center;
+  }
+
+  #rules-text {
+    font-size: 1rem;
+  }
+  
+  #close-rules-icon {
+    width: 1rem;
+    bottom: 4rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  
+  #rules-details-icon {
+    width: 80%;
+  }
+}
+
+
+
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #header {
+    padding: 1.5rem;
+    border-radius: 1rem;
+    margin: 1.5rem;
+  }
+
+  #game-logo-icon {
+    width: 12.5rem;
+  }
+
+  #score-text-value-div {
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.75rem;
+  }
+
+  #score-text {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+  }
+
+  #score-value {
+    font-size: 4.5rem;
+  }
+
+  #main-game {
+    width: 30rem;
+    height: 26.5rem;
+  }
+
+  .game-main-button {
+    --box-shadow-y: 7.5px;
+    width: 10rem;
+    height: 10rem;
+    border-width: 13.5px; 
+  }
+
+  .game-main-button:nth-child(1) {
+    left: -2.75rem;
+    top: -2.75rem;
+  }
+  
+  .game-main-button:nth-child(2) {
+    right: -2.75rem;
+    top: -2.75rem;
+  }
+  
+  .game-main-button:nth-child(3) {
+    bottom: -2.75rem;
+  }
+
+  .game-main-button-icon {
+    width: 3.5rem;
+  }
+
+  #main-game-outcome {
+    gap: 10rem 5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .game-outcome-button {
+    --box-shadow-y: 10px;
+    width: 20rem;
+    height: 20rem;
+    border-width: 25px;
+  }
+  
+  .game-outcome-button-icon {
+    width: 6.5rem;
+  }
+
+  .game-outcome-div {
+    gap: 3rem 0;
+  }
+
+  .game-outcome-text {
+    order: 1;
+    letter-spacing: 1.25px;
+    font-size: 1.25rem;
+  }
+
+  .game-outcome-default-div {
+    width: 15rem; 
+    height: 15rem; 
+  }
+
+  #game-outcome-result-div {
+    order: 2;
+    width: 100%;
+  }
+
+  #game-result-text {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    letter-spacing: 1.25px;
+  }
+
+  #game-play-again-button {
+    border-radius: 0.5rem;
+    padding: 1.5rem 2.75rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.75px;
+  }
+
+  #rules-button {
+    align-self: center;
+    margin: 1.5rem 0 2.5rem 0;
+    border-radius: 0.75rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+  }
+
+  #rules-div {
+    width: 100%;
+    height: 100%;
+    padding: 12.5rem 2.5rem 0 2.5rem;
+    gap: 7.5rem 0;
+    align-items: center;
+  }
+
+  #rules-text {
+    font-size: 2rem;
+  }
+  
+  #close-rules-icon {
+    width: 1.5rem;
+    bottom: 7rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+  
+  #rules-details-icon {
+    width: 60%;
+  }
+}
+
+
+
+@media screen and (min-width: 1024px) {
+  #header {
+    width: 50%;
+    padding: 1rem;
+    border-radius: 1rem;
+    align-self: center;
+    margin: 2rem 0;
+  }
+
+  #game-logo-icon {
+    width: 10.5rem;
+  }
+
+  #score-text-value-div {
+    padding: 0.75rem 2rem;
+    border-radius: 0.75rem;
+  }
+
+  #score-text {
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+  }
+
+  #score-value {
+    font-size: 3.5rem;
+  }
+
+  #main-game {
+    width: 20rem;
+    height: 17.5rem;
+  }
+
+  .game-main-button {
+    --box-shadow-y: 5px;
+    width: 7.5rem;
+    height: 7.5rem;
+    border-width: 10px; 
+  }
+
+  .game-main-button:nth-child(1) {
+    left: -2.5rem;
+    top: -2.5rem;
+  }
+  
+  .game-main-button:nth-child(2) {
+    right: -2.5rem;
+    top: -2.5rem;
+  }
+  
+  .game-main-button:nth-child(3) {
+    bottom: -2.5rem;
+  }
+
+  .game-main-button-icon {
+    width: 2.5rem;
+  }
+
+  #main-game-outcome {
+    gap: 0 3.5rem;
+  }
+  
+  .game-outcome-button {
+    --box-shadow-y: 7.5px;
+    width: 15rem;
+    height: 15rem;
+    border-width: 20px;
+  }
+  
+  .game-outcome-button-icon {
+    width: 5rem;
+  }
+
+  .game-outcome-div {
+    gap: 2rem 0;
+  }
+
+  .game-outcome-text {
+    letter-spacing: 1.5px;
+    font-size: 1rem;
+  }
+
+  .game-outcome-default-div {
+    width: 10rem; 
+    height: 10rem; 
+  }
+  
+  .game-outcome-div:first-child {
+    order: 0;
+  }
+
+  #game-outcome-result-div {
+    order: 1;
+    align-self: center;
+  }
+
+  .game-outcome-div:last-child {
+    order: 2;
+  }
+
+  #game-result-text {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+  }
+
+  #game-play-again-button {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+
+  #rules-button {
+    align-self: flex-end;
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.75rem;
+    font-size: 1rem;
+    margin: 2rem;
+  }
+
+  #rules-div {
+    border-radius: 0.75rem;
+    padding: 2rem;
+    width: 25%;
+    gap: 3rem 0;
+  }
+
+  #rules-text {
+    font-size: 1.5rem;
+  }
+  
+  #close-rules-icon {
+    width: 1.25rem;
+    right: 2rem;
+    top: 2rem;
+  }
+  
+  #rules-details-icon {
+    width: 90%;
+  }
+}
