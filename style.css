@@ -8,14 +8,8 @@
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
   font-family: var(--BarrowSemiCondensed);
-}
-
-button:focus,
-button:active {
-  outline: none;
-  background: none;
-  box-shadow: none;
 }
 
 
