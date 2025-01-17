@@ -1,14 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../src/style.css">
-  <title>Rock Paper Scissors</title>
-</head>
-<body>
-  <h1>hello world</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Rock Paper Scissors game" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../src/style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <header id="header">
+      <img src="../src/assets/logo.svg" loading="lazy" id="game-logo-icon" alt="GAME ICON" />
+      <div id="score-text-value-div">
+        <p id="score-text">SCORE</p>
+        <var id="score-value">12</var>
+      </div>
+    </header>
 
-  <script src="../src/index.js"></script>
-</body>
+    <section id="game-section">
+      <main id="main-game"></main>
+       <!-- <main id="main-game-outcome">
+        <div id="game-outcome-result-div">
+          <h1 id="game-result-text">YOU LOSE</h1>
+          <button type="button" id="game-play-again-button">PLAY AGAIN</button>
+        </div>
+        <div class="game-outcome-div">
+          <p class="game-outcome-text">YOU PICKED</p>
+          <div class="game-button-div">
+            <button class="game-button game-outcome-button game-button-scissors">
+              <img src="../src/assets/icon-paper.svg" loading="lazy" class="game-outcome-button-icon" alt="ICON">
+            </button>
+          </div>
+        </div>
+        <div class="game-outcome-div">
+          <p class="game-outcome-text">THE HOUSE PICKED</p>
+          <div class="game-button-div">
+            <button class="game-outcome-default-div"></button>
+          </div>
+        </div>
+       </main> -->
+    </section>
+
+    <button type="button" id="rules-button" onclick="document.getElementById('rules-fixed-section').style.display = 'flex'">RULES</button>
+
+    <section id="rules-fixed-section">
+      <div id="rules-div">
+        <h1 id="rules-text">RULES</h1>
+        <img src="../src/assets/icon-close.svg" id="close-rules-icon" loading="lazy" alt="CLOSE ICON" onclick="document.getElementById('rules-fixed-section').style.display = 'none'" />
+        <img src="../src/assets/image-rules.svg" id="rules-details-icon" loading="lazy" alt="RULES DETAILS" />
+      </div>
+    </section>
+
+    <script src="../src/index.js" defer></script>
+  </body>
 </html>
