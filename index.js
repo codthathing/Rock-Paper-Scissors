@@ -36,5 +36,5 @@ function displayGameOutcome(outcomeArray) {
         ${createButton("game-outcome-button", "game-outcome-button-icon", { buttonClass, buttonIcon, buttonAlt })}
       </div>
     `;
-  });
+  }).join("");
 }
