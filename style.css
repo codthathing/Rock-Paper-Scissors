@@ -104,15 +104,9 @@ body {
   color: white;
 }
 
-.game-button-div {
-  flex: 1; 
-  display: flex; 
-  align-items: center;
-}
-
 .game-outcome-default-div {
   border: none; 
-  background-color: hsl(237, 62%, 23%); 
+  background-color: hsl(229, 25%, 31%);
   border-radius: 50%;
 }
 
@@ -246,13 +240,13 @@ body {
   
   .game-outcome-button {
     --box-shadow-y: 5px;
-    width: 12rem;
-    height: 12rem;
-    border-width: 15px;
+    width: 8rem;
+    height: 8rem;
+    border-width: 10px;
   }
   
   .game-outcome-button-icon {
-    width: 4rem;
+    width: 2.5rem;
   }
 
   .game-outcome-div {
@@ -389,13 +383,13 @@ body {
   
   .game-outcome-button {
     --box-shadow-y: 10px;
-    width: 20rem;
-    height: 20rem;
+    width: 17.5rem;
+    height: 17.5rem;
     border-width: 25px;
   }
   
   .game-outcome-button-icon {
-    width: 6.5rem;
+    width: 5rem;
   }
 
   .game-outcome-div {
@@ -409,8 +403,8 @@ body {
   }
 
   .game-outcome-default-div {
-    width: 15rem; 
-    height: 15rem; 
+    width: 17.5rem; 
+    height: 17.5rem; 
   }
 
   #game-outcome-result-div {
@@ -529,8 +523,8 @@ body {
   
   .game-outcome-button {
     --box-shadow-y: 7.5px;
-    width: 15rem;
-    height: 15rem;
+    width: 12.5rem;
+    height: 12.5rem;
     border-width: 20px;
   }
   
@@ -548,8 +542,8 @@ body {
   }
 
   .game-outcome-default-div {
-    width: 10rem; 
-    height: 10rem; 
+    width: 12.5rem; 
+    height: 12.5rem; 
   }
   
   .game-outcome-div:first-child {

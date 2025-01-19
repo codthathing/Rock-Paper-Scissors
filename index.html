@@ -22,26 +22,22 @@
 
     <section id="game-section">
       <!-- <main id="main-game"></main> -->
-       <main id="main-game-outcome">
+      <main id="main-game-outcome">
         <div id="game-outcome-result-div">
           <h1 id="game-result-text">YOU LOSE</h1>
           <button type="button" id="game-play-again-button">PLAY AGAIN</button>
         </div>
         <div class="game-outcome-div">
           <p class="game-outcome-text">YOU PICKED</p>
-          <div class="game-button-div">
-            <button class="game-button game-outcome-button game-button-scissors">
-              <img src="../src/assets/icon-paper.svg" loading="lazy" class="game-outcome-button-icon" alt="ICON">
-            </button>
-          </div>
+          <button class="game-button game-outcome-button game-button-scissors">
+            <img src="../src/assets/icon-paper.svg" loading="lazy" class="game-outcome-button-icon" alt="ICON" />
+          </button>
         </div>
         <div class="game-outcome-div">
           <p class="game-outcome-text">THE HOUSE PICKED</p>
-          <div class="game-button-div">
-            <button class="game-outcome-default-div"></button>
-          </div>
+          <button class="game-outcome-default-div"></button>
         </div>
-       </main>
+      </main>
     </section>
 
     <button type="button" id="rules-button" onclick="document.getElementById('rules-fixed-section').style.display = 'flex'">RULES</button>
