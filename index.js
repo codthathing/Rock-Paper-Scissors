@@ -12,7 +12,7 @@ function createButton(mainButtonClass, mainButtonIconClass, { buttonClass, butto
   `;
 }
 
-document.getElementById("main-game").innerHTML = gameButtonDetails.map(({ buttonIcon, buttonAlt, buttonClass }) => createButton("game-main-button", "game-main-button-icon", { buttonClass, buttonIcon, buttonAlt })).join("");
+// document.getElementById("main-game").innerHTML = gameButtonDetails.map(({ buttonIcon, buttonAlt, buttonClass }) => createButton("game-main-button", "game-main-button-icon", { buttonClass, buttonIcon, buttonAlt })).join("");
 
 function displayMainGame(determineStyle) {
   document.getElementById("main-game").style.display = determineStyle ? "none" : "block";
