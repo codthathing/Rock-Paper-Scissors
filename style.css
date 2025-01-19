@@ -234,7 +234,7 @@ body {
   }
 
   #main-game-outcome {
-    gap: 5rem 1.5rem;
+    gap: 5rem 2rem;
     flex-wrap: wrap;
     justify-content: center;
   }
