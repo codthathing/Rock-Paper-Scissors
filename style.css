@@ -53,7 +53,6 @@ body {
   background-color: white;
   border-radius: 50%;
   border-style: solid;
-  cursor: pointer;
   box-shadow: 0 var(--box-shadow-y) 0px var(--box-shadow-color), 0 var(--box-shadow-y) 0px #D6D6D6 inset;
 }
 
@@ -81,6 +80,7 @@ body {
 
 .game-main-button {
   position: absolute;
+  cursor: pointer;
 }
 
 .game-main-button:nth-child(3) {
@@ -90,7 +90,7 @@ body {
 }
 
 #main-game-outcome {
-  display: flex;
+  display: none;
 }
 
 .game-outcome-div {
@@ -112,6 +112,7 @@ body {
 
 #game-outcome-result-div {
   text-align: center;
+  display: none;
 }
 
 #game-result-text {

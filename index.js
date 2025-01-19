@@ -4,16 +4,24 @@ const gameButtonDetails = [
   { id: 2, buttonIcon: "./src/assets/icon-rock.svg", buttonAlt: "ROCK", buttonClass: "game-button-rock" },
 ];
 
-function createButton(mainButtonClass, mainButtonIconClass, { buttonClass, buttonIcon, buttonAlt }) {
+function createButton(mainButtonClass, mainButtonIconClass, buttonFunction, { buttonClass, buttonIcon, buttonAlt }) {
   return `
-    <button class="${`game-button ${mainButtonClass} ${buttonClass}`}">
+    <button onclick="${buttonFunction}" class="${`game-button ${mainButtonClass} ${buttonClass}`}">
       <img src=${buttonIcon} loading="lazy" class=${mainButtonIconClass} alt="${`${buttonAlt} ICON`}">
     </button>
   `;
 }
 
-// document.getElementById("main-game").innerHTML = gameButtonDetails.map(({ buttonIcon, buttonAlt, buttonClass }) => createButton("game-main-button", "game-main-button-icon", { buttonClass, buttonIcon, buttonAlt })).join("");
+document.getElementById("main-game").innerHTML = gameButtonDetails.map(({ id, buttonIcon, buttonAlt, buttonClass }) => createButton("game-main-button", "game-main-button-icon", `getButtonDetails(${id})`, { buttonClass, buttonIcon, buttonAlt })).join("");
 
 function displayMainGame(determineStyle) {
   document.getElementById("main-game").style.display = determineStyle ? "none" : "block";
+  document.getElementById("main-game-outcome").style.display = determineStyle ? "flex" : "none";
+}
+
+let gameOutcomeButtonDetails = [];
+gameOutcomeButtonDetails = gameOutcomeButtonDetails.concat(Array(2 - gameOutcomeButtonDetails.length).fill({buttonText: "THE HOUSE PICKED", buttonClass: "game-outcome-default-div"}));
+
+function getButtonDetails(id) {
+  
 }
