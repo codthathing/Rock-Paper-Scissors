@@ -112,7 +112,6 @@ body {
 
 #game-outcome-result-div {
   text-align: center;
-  display: none;
 }
 
 #game-result-text {
@@ -547,7 +546,7 @@ body {
     height: 12.5rem; 
   }
   
-  .game-outcome-div:first-child {
+  .game-outcome-div:nth-child(1) {
     order: 0;
   }
 
@@ -556,7 +555,7 @@ body {
     align-self: center;
   }
 
-  .game-outcome-div:last-child {
+  .game-outcome-div:nth-child(2) {
     order: 2;
   }
 
