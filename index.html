@@ -7,13 +7,13 @@
     <meta name="description" content="Rock Paper Scissors game" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" rel="preload" />
     <link rel="stylesheet" href="./style.css" />
     <title>Rock Paper Scissors</title>
   </head>
   <body>
     <header id="header">
-      <img src="./src/assets/logo.svg" loading="lazy" id="game-logo-icon" alt="GAME ICON" />
+      <img src="./src/assets/logo.svg" id="game-logo-icon" alt="GAME ICON" />
       <div id="score-text-value-div">
         <p id="score-text">SCORE</p>
         <var id="score-value"></var>
