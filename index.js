@@ -90,5 +90,6 @@ function restartGame() {
     updateSessionStorage();
   };
   displayMainGame(false);
+  document.getElementById("main-game-outcome").innerHTML = "";
   gameOutcomeButtonDetails = { restartButton: "PLAY AGAIN", gameOutcome: "", buttonArray: [] };
 }
