@@ -52,7 +52,6 @@ function determineHouseButton() {
   const timeout = setTimeout(() => {
     const houseButton = gameButtonDetails.find(({ id }) => id === generatedButtonNumber);
     gameOutcomeButtonDetails.buttonArray = gameOutcomeButtonDetails.buttonArray.map((outcomeButton) => (outcomeButton.buttonText === "THE HOUSE PICKED" ? { ...outcomeButton, ...houseButton, buttonClass: houseButton.buttonClass } : outcomeButton));
-    displayGameOutcome(gameOutcomeButtonDetails.buttonArray);
     determineOutcomeResult();
     clearTimeout(timeout);
   }, 3000);
@@ -81,6 +80,8 @@ function determineOutcomeResult() {
   };
   if(gameResult === 0) gameOutcomeButtonDetails.restartButton = "RESTART";
   updateSessionStorage();
+  gameOutcomeButtonDetails.buttonArray = gameOutcomeButtonDetails.buttonArray.map((outcomeButton) => (outcomeButton.buttonText === "YOU PICKED" ? { ...outcomeButton, buttonClass: `${outcomeButton.buttonClass} ${gameOutcomeButtonDetails.gameOutcome === "YOU WIN" ? "game-button-winner" : ""}` } : { ...outcomeButton, buttonClass: `${outcomeButton.buttonClass} ${gameOutcomeButtonDetails.gameOutcome === "YOU LOSE" ? "game-button-winner" : ""}` }));
+  displayGameOutcome(gameOutcomeButtonDetails.buttonArray);
   addResultDiv(gameOutcomeButtonDetails.gameOutcome, gameOutcomeButtonDetails.restartButton);
 }
 

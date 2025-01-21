@@ -89,6 +89,22 @@ body {
   margin: 0 auto;
 }
 
+.game-button-winner {
+  position: relative;
+}
+
+.game-button-winner::before,
+.game-button-winner::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  z-index: -10;
+}
+
 #main-game-outcome {
   display: none;
 }
@@ -230,6 +246,16 @@ body {
 
   .game-main-button-icon {
     width: 1.5rem;
+  }
+
+  .game-button-winner::before {
+    width: 170%;
+    height: 170%;
+  }
+
+  .game-button-winner::after {
+    width: 210%;
+    height: 210%;
   }
 
   #main-game-outcome {
@@ -375,6 +401,16 @@ body {
     width: 3.5rem;
   }
 
+  .game-button-winner::before {
+    width: 180%;
+    height: 180%;
+  }
+
+  .game-button-winner::after {
+    width: 230%;
+    height: 230%;
+  }
+
   #main-game-outcome {
     gap: 10rem 5rem;
     flex-wrap: wrap;
@@ -515,6 +551,16 @@ body {
 
   .game-main-button-icon {
     width: 2.5rem;
+  }
+
+  .game-button-winner::before {
+    width: 200%;
+    height: 200%;
+  }
+
+  .game-button-winner::after {
+    width: 250%;
+    height: 250%;
   }
 
   #main-game-outcome {
