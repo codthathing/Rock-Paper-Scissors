@@ -249,17 +249,17 @@ body {
   }
 
   .game-button-winner::before {
-    width: 170%;
-    height: 170%;
+    width: 150%;
+    height: 150%;
   }
 
   .game-button-winner::after {
-    width: 210%;
-    height: 210%;
+    width: 190%;
+    height: 190%;
   }
 
   #main-game-outcome {
-    gap: 5rem 2rem;
+    gap: 4rem 1.5rem;
     flex-wrap: wrap;
     justify-content: center;
   }
