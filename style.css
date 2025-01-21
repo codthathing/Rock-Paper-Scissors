@@ -254,8 +254,8 @@ body {
   }
 
   .game-button-winner::after {
-    width: 190%;
-    height: 190%;
+    width: 185%;
+    height: 185%;
   }
 
   #main-game-outcome {
